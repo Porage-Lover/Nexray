@@ -287,3 +287,20 @@ def get_report_by_id(db_path: str, report_id: int) -> dict | None:
     report["raw_output"] = _decrypt(report["raw_output"], key)
 
     return report
+
+
+def clear_all_reports(db_path: str = "./data/reports.db") -> None:
+    """
+    Deletes all reports from the database.
+
+    Args:
+        db_path: Path to the SQLite database file.
+    """
+    if not os.path.exists(db_path):
+        return
+
+    conn = sqlite3.connect(db_path)
+    cursor = conn.cursor()
+    cursor.execute("DELETE FROM reports")
+    conn.commit()
+    conn.close()

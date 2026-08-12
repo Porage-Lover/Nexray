@@ -22,7 +22,8 @@ from prompts import (
     format_list_items,
 )
 from engine import get_model, analyze_image, chat_followup, get_memory_usage
-from database import init_database, save_report, get_all_reports
+import json
+from database import init_database, save_report, get_all_reports, clear_all_reports
 from pdf_export import generate_pdf
 from fhir_export import generate_fhir_json
 from rag import load_guidelines, retrieve_context
@@ -250,9 +251,24 @@ with st.sidebar:
     st.markdown("---")
     st.markdown("### Report History")
     past_reports = get_all_reports(DB_PATH)
+    
     if past_reports:
+        col1, col2 = st.columns(2)
+        with col1:
+            if st.button("🗑️ Clear All", width="stretch"):
+                clear_all_reports(DB_PATH)
+                st.rerun()
+        with col2:
+            st.download_button(
+                label="📥 Export JSON",
+                data=json.dumps(past_reports, indent=2),
+                file_name="hack4health_reports_export.json",
+                mime="application/json",
+                width="stretch",
+            )
+
         st.markdown(
-            f'<p style="color:#555; font-size:0.8rem;">{len(past_reports)} report(s) saved</p>',
+            f'<p style="color:#555; font-size:0.8rem; margin-top: 0.5rem;">{len(past_reports)} report(s) saved</p>',
             unsafe_allow_html=True,
         )
         for r in past_reports[:5]:
