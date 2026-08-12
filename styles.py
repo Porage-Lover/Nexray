@@ -48,15 +48,33 @@ p, h1, h2, h3, h4, h5, h6, label, input, textarea, select, .stMarkdown, div[data
 }
 
 /* ============================================
-   3. CLEAN THE CANVAS
+   3. CLEAN THE CANVAS & NUCLEAR ICON FALLBACK
    ============================================ */
 #MainMenu { visibility: hidden !important; }
-header[data-testid="stHeader"] { background: transparent !important; }
+header[data-testid="stHeader"] { background-color: transparent !important; }
 footer { visibility: hidden !important; }
 .stDeployButton { display: none !important; }
 [data-testid="stToolbar"] { display: none !important; }
 [data-testid="stDecoration"] { display: none !important; }
 [data-testid="stStatusWidget"] { display: none !important; }
+
+/* Target the exact inner span of the collapse/expand buttons */
+[data-testid="stSidebarCollapseButton"] span,
+[data-testid="baseButton-header"] span,
+button[kind="header"] span {
+    font-size: 0px !important; /* Hides the ugly broken text string */
+    color: transparent !important; 
+}
+
+/* Inject a clean, native macOS chevron in its place */
+[data-testid="stSidebarCollapseButton"] span::after {
+    content: "☰" !important; /* Apple SF Symbol for sidebar (or use "☰" / "‹‹" if SF symbols fail) */
+    font-size: 18px !important;
+    color: #ffffff !important;
+    display: block !important;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-weight: 300 !important;
+}
 
 /* ============================================
    4. WINDOW MATERIALS (GLASSMORPHISM / VIBRANCY)
