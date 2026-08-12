@@ -7,10 +7,30 @@ macos_hig_css = """
 /* ============================================
    1. MAC OS HIG TYPOGRAPHY
    ============================================ */
-.stApp, .stMarkdown, .stText, p, h1, h2, h3, h4, h5, h6, li, span, div, label, input, button {
+p, h1, h2, h3, h4, h5, h6, label, input, textarea, select, .stMarkdown, div[data-testid="stText"] {
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", Helvetica, Arial, sans-serif !important;
     -webkit-font-smoothing: antialiased !important;
     -moz-osx-font-smoothing: grayscale !important;
+}
+
+/* Preserve Streamlit Icon Fonts */
+[data-testid="stIcon"],
+[data-testid="stSidebarCollapseButton"],
+[data-testid="stSidebarCollapseButton"] *,
+[data-testid="stSidebarHeader"] *,
+.material-symbols-outlined,
+.material-icons,
+[class*="material-symbols"] {
+    font-family: 'Material Symbols Outlined', 'Material Icons' !important;
+    font-weight: normal !important;
+    font-style: normal !important;
+    line-height: 1 !important;
+    letter-spacing: normal !important;
+    text-transform: none !important;
+    white-space: nowrap !important;
+    word-wrap: normal !important;
+    direction: ltr !important;
+    -webkit-font-smoothing: antialiased !important;
 }
 
 /* ============================================
