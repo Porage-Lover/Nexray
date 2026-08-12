@@ -126,8 +126,6 @@ button[kind="header"] span {
 [data-testid="stSidebar"] {
     display: block !important;
     visibility: visible !important;
-    width: 340px !important;
-    min-width: 340px !important;
     background-color: rgba(18, 18, 18, 0.75) !important;
     backdrop-filter: blur(20px) saturate(180%) !important;
     -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
