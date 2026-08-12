@@ -3,7 +3,8 @@ Clinical prompt templates for HealthGPT-Pro.
 Provides structured, narrative, and combined prompt generation as well as output parsing.
 """
 import re
-from typing import Dict
+from typing import Dict, List, Tuple
+
 
 MODALITIES = [
     "X-ray", "MRI", "CT Scan", "Fundus Photography", "Dermoscopy",
@@ -164,3 +165,89 @@ def parse_model_output(raw_output: str) -> Dict[str, str]:
         result["clinical_notes"] = clin_notes_match.group(1).strip()
 
     return result
+
+
+def parse_diagnosis_items(raw_text: str) -> List[Tuple[str, str]]:
+    """
+    Parses the differential diagnosis text into individual items with severity badges.
+
+    Extracts severity labels (CRITICAL, HIGH, MODERATE, LOW) and the associated
+    diagnosis text. Returns a list of (severity, diagnosis_text) tuples.
+
+    Args:
+        raw_text: Raw text from the differential_diagnosis section.
+
+    Returns:
+        A list of (severity, text) tuples. Severity is one of:
+        'CRITICAL', 'HIGH', 'MODERATE', 'LOW', or 'LOW' as default.
+    """
+    if not raw_text:
+        return []
+
+    items = []
+    lines = raw_text.strip().split("\n")
+
+    for line in lines:
+        line = line.strip()
+        if not line:
+            continue
+        # Remove list markers (-, *, 1., etc.)
+        line = re.sub(r"^[\-\*•]\s*", "", line)
+        line = re.sub(r"^\d+[\.\)]\s*", "", line)
+        if not line:
+            continue
+
+        # Extract severity
+        severity = "LOW"
+        severity_match = re.search(
+            r"\b(CRITICAL|HIGH|MODERATE|LOW)\b", line, re.IGNORECASE
+        )
+        if severity_match:
+            severity = severity_match.group(1).upper()
+
+        # Clean the text — remove severity label artifacts
+        clean_text = re.sub(
+            r"\s*[\(\[]*\s*(CRITICAL|HIGH|MODERATE|LOW)\s*[\)\]]*\s*[:\-–—]*\s*",
+            " ",
+            line,
+            flags=re.IGNORECASE,
+        ).strip()
+        # Remove leading/trailing separators
+        clean_text = re.sub(r"^[\-–—:]+\s*", "", clean_text).strip()
+
+        if clean_text:
+            items.append((severity, clean_text))
+
+    return items
+
+
+def format_list_items(raw_text: str) -> List[str]:
+    """
+    Splits raw text into clean list items for rendering.
+
+    Handles bullet points (-, *, •), numbered lists (1., 2)), and plain lines.
+
+    Args:
+        raw_text: Raw text with potential list formatting.
+
+    Returns:
+        A list of cleaned text strings, one per item.
+    """
+    if not raw_text:
+        return []
+
+    items = []
+    lines = raw_text.strip().split("\n")
+
+    for line in lines:
+        line = line.strip()
+        if not line:
+            continue
+        # Remove list markers
+        line = re.sub(r"^[\-\*•]\s*", "", line)
+        line = re.sub(r"^\d+[\.\)]\s*", "", line)
+        line = line.strip()
+        if line:
+            items.append(line)
+
+    return items

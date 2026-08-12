@@ -110,3 +110,95 @@ def analyze_image(
     )
 
     return response_text, inference_time, token_count
+
+
+def chat_followup(
+    model,
+    processor,
+    config,
+    chat_history: list,
+    user_message: str,
+    report_context: str = "",
+    image_path: str = None,
+    max_tokens: int = 1024,
+    temperature: float = 0.4,
+) -> tuple[str, float]:
+    """
+    Handles a follow-up question in the clinical copilot chat.
+    Builds a multi-turn conversation with prior report context.
+
+    Args:
+        model: Loaded MLX model.
+        processor: Loaded processor.
+        config: Model config (model.config).
+        chat_history: List of {"role": "user"|"assistant", "content": str} dicts.
+        user_message: The new user question.
+        report_context: The original report text for grounding.
+        image_path: Optional image path for visual grounding.
+        max_tokens: Max tokens to generate.
+        temperature: Sampling temperature.
+
+    Returns:
+        Tuple of (response_text, inference_time).
+    """
+    # Build conversation with system context
+    messages = []
+    if report_context:
+        system_msg = (
+            "You are a board-certified radiologist assistant AI. "
+            "You previously analyzed a medical image and generated the following report:\n\n"
+            f"{report_context}\n\n"
+            "Answer follow-up questions based on this report. "
+            "Be precise, professional, and helpful. "
+            "If asked to simplify, use patient-friendly language."
+        )
+        messages.append({"role": "system", "content": system_msg})
+
+    # Add chat history
+    for msg in chat_history:
+        messages.append(msg)
+
+    # Add new user message
+    messages.append({"role": "user", "content": user_message})
+
+    # Format with chat template
+    num_images = 1 if image_path else 0
+    formatted_prompt = apply_chat_template(
+        processor, config, messages, num_images=num_images
+    )
+
+    import time
+    start_time = time.time()
+    try:
+        kwargs = {"max_tokens": max_tokens, "temp": temperature}
+        if image_path and os.path.exists(image_path):
+            result = generate(model, processor, formatted_prompt, image=[image_path], **kwargs)
+        else:
+            result = generate(model, processor, formatted_prompt, **kwargs)
+    except Exception as e:
+        return f"Error: {str(e)}", 0.0
+
+    inference_time = time.time() - start_time
+    response_text = result.text if hasattr(result, "text") else str(result)
+    return response_text, inference_time
+
+
+def get_memory_usage() -> str:
+    """
+    Returns the current process memory usage as a human-readable string.
+    Uses macOS-native resource module.
+
+    Returns:
+        Memory usage string like '4.2 GB'.
+    """
+    try:
+        import resource
+        # ru_maxrss is in bytes on macOS
+        mem_bytes = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
+        mem_gb = mem_bytes / (1024 ** 3)
+        if mem_gb >= 1.0:
+            return f"{mem_gb:.1f} GB"
+        else:
+            return f"{mem_gb * 1024:.0f} MB"
+    except Exception:
+        return "N/A"

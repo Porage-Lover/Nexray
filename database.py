@@ -5,6 +5,8 @@ Uses Fernet symmetric encryption for at-rest patient data protection.
 import sqlite3
 import os
 import datetime
+import hashlib
+import json
 from cryptography.fernet import Fernet
 
 
@@ -98,9 +100,16 @@ def init_database(db_path: str = "./data/reports.db") -> None:
             image_filename TEXT,
             inference_time REAL,
             token_count INTEGER,
-            created_at TEXT
+            created_at TEXT,
+            report_hash TEXT
         )
     """)
+    
+    try:
+        cursor.execute("ALTER TABLE reports ADD COLUMN report_hash TEXT")
+    except sqlite3.OperationalError:
+        pass
+        
     conn.commit()
     conn.close()
 
@@ -148,6 +157,19 @@ def save_report(
     enc_raw_output = _encrypt(report_data.get("raw", ""), key)
 
     created_at = datetime.datetime.now(datetime.timezone.utc).isoformat()
+    
+    # Compute SHA-256 integrity hash of the report payload
+    hash_payload = json.dumps({
+        "patient_id": patient_id,
+        "patient_name": patient_name,
+        "modality": modality,
+        "findings": report_data.get("findings", ""),
+        "differential_diagnosis": report_data.get("differential_diagnosis", ""),
+        "recommended_actions": report_data.get("recommended_actions", ""),
+        "clinical_notes": report_data.get("clinical_notes", ""),
+        "narrative": report_data.get("narrative", ""),
+    }, sort_keys=True)
+    report_hash = hashlib.sha256(hash_payload.encode("utf-8")).hexdigest()
 
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
@@ -157,8 +179,8 @@ def save_report(
             patient_id, patient_name, modality, clinical_context,
             findings, differential_diagnosis, recommended_actions,
             clinical_notes, narrative, raw_output, image_filename,
-            inference_time, token_count, created_at
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            inference_time, token_count, created_at, report_hash
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     """,
         (
             enc_patient_id,
@@ -175,6 +197,7 @@ def save_report(
             inference_time,
             token_count,
             created_at,
+            report_hash
         ),
     )
 

@@ -196,10 +196,10 @@ h1, h2, h3, h4, h5, h6 {
    9. GLASSMORPHISM CARDS & METRICS
    ============================================ */
 [data-testid="metric-container"] {
-    background: rgba(255,255,255,0.03) !important;
-    backdrop-filter: blur(20px) !important;
-    -webkit-backdrop-filter: blur(20px) !important;
-    border: 1px solid rgba(255,255,255,0.06) !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255,255,255,0.1) !important;
     border-radius: 12px !important;
     padding: 1rem !important;
     transition: all 0.3s ease !important;
@@ -212,10 +212,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Report Section Cards */
 .report-card {
-    background: rgba(255,255,255,0.025);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255,255,255,0.06);
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
     border-left: 3px solid #00d4aa;
     border-radius: 12px;
     padding: 1.25rem 1.5rem;
@@ -333,54 +333,51 @@ h1, h2, h3, h4, h5, h6 {
    ============================================ */
 .badge-critical {
     display: inline-block;
-    background-color: rgba(244, 67, 54, 0.12);
-    color: #ff5252;
+    background: #FF4D4D;
+    color: #ffffff;
     padding: 3px 10px;
     border-radius: 20px;
-    font-size: 0.72rem;
-    font-weight: 600;
-    border: 1px solid rgba(244, 67, 54, 0.25);
+    font-size: 0.7rem;
+    font-weight: 700;
     letter-spacing: 0.5px;
     text-transform: uppercase;
+    margin-right: 6px;
 }
-
 .badge-high {
     display: inline-block;
-    background-color: rgba(255, 152, 0, 0.12);
-    color: #ffb300;
+    background: #FFA500;
+    color: #1a1a1a;
     padding: 3px 10px;
     border-radius: 20px;
-    font-size: 0.72rem;
-    font-weight: 600;
-    border: 1px solid rgba(255, 152, 0, 0.25);
+    font-size: 0.7rem;
+    font-weight: 700;
     letter-spacing: 0.5px;
     text-transform: uppercase;
+    margin-right: 6px;
 }
-
 .badge-moderate {
     display: inline-block;
-    background-color: rgba(33, 150, 243, 0.12);
-    color: #42a5f5;
+    background: #E6C200;
+    color: #1a1a1a;
     padding: 3px 10px;
     border-radius: 20px;
-    font-size: 0.72rem;
-    font-weight: 600;
-    border: 1px solid rgba(33, 150, 243, 0.25);
+    font-size: 0.7rem;
+    font-weight: 700;
     letter-spacing: 0.5px;
     text-transform: uppercase;
+    margin-right: 6px;
 }
-
 .badge-low {
     display: inline-block;
-    background-color: rgba(76, 175, 80, 0.12);
-    color: #69f0ae;
+    background: #2ECC71;
+    color: #1a1a1a;
     padding: 3px 10px;
     border-radius: 20px;
-    font-size: 0.72rem;
-    font-weight: 600;
-    border: 1px solid rgba(76, 175, 80, 0.25);
+    font-size: 0.7rem;
+    font-weight: 700;
     letter-spacing: 0.5px;
     text-transform: uppercase;
+    margin-right: 6px;
 }
 
 /* ============================================
@@ -513,6 +510,140 @@ hr {
 @keyframes pulse {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.4; }
+}
+
+/* ============================================
+   20. TELEMETRY BAR
+   ============================================ */
+.telemetry-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 10px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 0.75rem;
+}
+.telemetry-item {
+    color: #888;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.telemetry-item .value {
+    color: #e0e0e0;
+    font-weight: 600;
+}
+.telemetry-secure {
+    color: #2ECC71;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.telemetry-secure::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: #2ECC71;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(46, 204, 113, 0.6);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* ============================================
+   21. IMAGE TOOLBAR
+   ============================================ */
+.image-toolbar {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.75rem;
+}
+.image-toolbar label {
+    color: #888 !important;
+    font-size: 0.78rem !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ============================================
+   22. DIAGNOSIS LIST
+   ============================================ */
+.diagnosis-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.diagnosis-item:last-child {
+    border-bottom: none;
+}
+.diagnosis-text {
+    color: #c8c8c8;
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+.finding-item {
+    color: #c8c8c8;
+    font-size: 0.88rem;
+    line-height: 1.8;
+    padding: 2px 0;
+    padding-left: 12px;
+    border-left: 2px solid rgba(0, 212, 170, 0.3);
+    margin-bottom: 6px;
+}
+
+/* ============================================
+   23. CHAT / COPILOT
+   ============================================ */
+.chat-container {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px;
+    padding: 1rem;
+    max-height: 400px;
+    overflow-y: auto;
+}
+.chat-msg-user {
+    background: rgba(26, 115, 232, 0.15);
+    border: 1px solid rgba(26, 115, 232, 0.25);
+    border-radius: 12px 12px 4px 12px;
+    padding: 10px 14px;
+    margin: 8px 0;
+    color: #e0e0e0;
+    font-size: 0.88rem;
+    max-width: 85%;
+    margin-left: auto;
+}
+.chat-msg-ai {
+    background: rgba(0, 212, 170, 0.08);
+    border: 1px solid rgba(0, 212, 170, 0.15);
+    border-radius: 12px 12px 12px 4px;
+    padding: 10px 14px;
+    margin: 8px 0;
+    color: #d0d0d0;
+    font-size: 0.88rem;
+    line-height: 1.7;
+    max-width: 85%;
+}
+
+/* ============================================
+   24. PADDING BOTTOM (AVOID OVERLAP)
+   ============================================ */
+.main .block-container {
+    padding-bottom: 60px !important;
 }
 </style>
 """, unsafe_allow_html=True)
