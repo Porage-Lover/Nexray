@@ -1,5 +1,5 @@
 """
-PDF report generation for Hack4Health clinical AI reports.
+PDF report generation for NexRay clinical AI reports.
 Uses fpdf2 library for lightweight PDF creation with no system binary dependencies.
 """
 import os
@@ -57,7 +57,7 @@ def generate_pdf(
     # ── Header ──────────────────────────────────────────────
     pdf.set_font("Helvetica", "B", 22)
     pdf.set_text_color(0, 0, 0)
-    pdf.cell(0, 12, "Hack4Health", ln=False, align="C")
+    pdf.cell(0, 12, "NexRay", ln=False, align="C")
     pdf.ln(10)
     pdf.set_font("Helvetica", "", 10)
     pdf.set_text_color(100, 100, 100)

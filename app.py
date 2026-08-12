@@ -1,5 +1,5 @@
 """
-Hack4Health — Sovereign Clinical AI
+NexRay — Advanced Diagnostic Imaging & Reporting
 A fully offline medical image analysis system powered by HealthGPT-Pro-8B
 running locally on Apple Silicon via MLX.
 
@@ -31,7 +31,7 @@ from rag import load_guidelines, retrieve_context
 
 # ── Page Configuration ──────────────────────────────────────
 st.set_page_config(
-    page_title="Hack4Health — Clinical AI",
+    page_title="NexRay — Diagnostic Imaging",
     page_icon="🏥",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -185,7 +185,7 @@ with st.sidebar:
     st.markdown(
         """
         <div class="sidebar-logo">
-            <div class="logo-text">🏥 Hack4Health</div>
+            <div class="logo-text">🏥 NexRay</div>
             <div class="logo-sub">Sovereign Clinical AI</div>
         </div>
         """,
@@ -194,7 +194,7 @@ with st.sidebar:
 
     # Status indicator
     st.markdown(
-        '<div class="status-offline">● Fully Offline &nbsp;·&nbsp; Zero Data Leakage</div>',
+        '',
         unsafe_allow_html=True,
     )
 
@@ -295,11 +295,11 @@ with st.sidebar:
 
 # Title
 st.markdown(
-    '<p class="gradient-title">Hack4Health</p>',
+    '<p class="gradient-title">NexRay</p>',
     unsafe_allow_html=True,
 )
 st.markdown(
-    '<p class="subtitle">Sovereign Clinical AI · Powered by HealthGPT-Pro</p>',
+    '<p class="subtitle">Advanced Diagnostic Imaging & Reporting</p>',
     unsafe_allow_html=True,
 )
 st.markdown("---")
@@ -350,8 +350,8 @@ if analyze_clicked:
                     <div class="ring"></div>
                 </div>
                 <p style="text-align:center; color:#555; font-size:0.85rem; margin-top:-1rem;">
-                    Analyzing image with HealthGPT-Pro on Apple Silicon...
-                    {"<br><span style='color:#00d4aa; font-size:0.75rem;'>📚 Clinical RAG active — guidelines injected</span>" if rag_active else ""}
+                    Processing diagnostic scan...
+                    {"<br><span style='color:#00d4aa; font-size:0.75rem;'>📚 Cross-referencing clinical guidelines...</span>" if rag_active else ""}
                 </p>
                 """,
                 unsafe_allow_html=True,
@@ -547,7 +547,7 @@ if st.session_state.report_data and uploaded_file:
                     image_path=st.session_state.image_path,
                 )
                 timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-                filename = f"Hack4Health_Report_{timestamp}.pdf"
+                filename = f"NexRay_Report_{timestamp}.pdf"
                 st.markdown('<div class="ghost-btn">', unsafe_allow_html=True)
                 st.download_button(
                     label="📄  Export PDF",
@@ -572,7 +572,7 @@ if st.session_state.report_data and uploaded_file:
                     token_count=st.session_state.token_count,
                 )
                 timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-                fhir_filename = f"Hack4Health_FHIR_{timestamp}.json"
+                fhir_filename = f"NexRay_FHIR_{timestamp}.json"
                 st.markdown('<div class="ghost-btn">', unsafe_allow_html=True)
                 st.download_button(
                     label="🏥  Export FHIR",
@@ -670,10 +670,8 @@ if st.session_state.report_data and uploaded_file:
     mem_usage = get_memory_usage()
     st.markdown(
         f'<div class="telemetry-bar">'
-        f'<div class="telemetry-item">⚡ Inference: <span class="value">{st.session_state.inference_time:.1f}s</span></div>'
-        f'<div class="telemetry-item">🧠 Memory: <span class="value">{mem_usage} Unified RAM</span></div>'
-        f'<div class="telemetry-item">⚙️ Engine: <span class="value">HealthGPT-Pro-8B (MLX 4-bit)</span></div>'
-        f'<div class="telemetry-secure">🔒 AIR-GAPPED · ZERO-NETWORK: SECURE</div>'
+        f'<div class="telemetry-item">⏱️ Inference: <span class="value">{st.session_state.inference_time:.1f}s</span></div>'
+        f'<div class="telemetry-item">🧠 Memory: <span class="value">{mem_usage}</span></div>'
         f'</div>',
         unsafe_allow_html=True,
     )
@@ -712,10 +710,8 @@ elif not st.session_state.report_data:
     # Telemetry footer even in empty state
     st.markdown(
         f'<div class="telemetry-bar">'
-        f'<div class="telemetry-item">⚡ Inference: <span class="value">—</span></div>'
+        f'<div class="telemetry-item">⏱️ Inference: <span class="value">—</span></div>'
         f'<div class="telemetry-item">🧠 Memory: <span class="value">—</span></div>'
-        f'<div class="telemetry-item">⚙️ Engine: <span class="value">HealthGPT-Pro-8B (MLX 4-bit)</span></div>'
-        f'<div class="telemetry-secure">🔒 AIR-GAPPED · ZERO-NETWORK: SECURE</div>'
         f'</div>',
         unsafe_allow_html=True,
     )

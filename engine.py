@@ -41,12 +41,12 @@ def load_model(model_path: str = DEFAULT_MODEL_PATH) -> tuple:
             "This requires a one-time internet connection (~16GB download)."
         )
 
-    print(f"[Hack4Health] Loading model from {model_path}...")
+    print(f"[NexRay] Loading model from {model_path}...")
     model, processor = load(model_path)
     # Use model.config (not load_config) to match the mlx-vlm CLI pattern.
     # model.config contains the runtime config that apply_chat_template expects.
     config = model.config
-    print("[Hack4Health] Model loaded successfully.")
+    print("[NexRay] Model loaded successfully.")
 
     return model, processor, config
 
