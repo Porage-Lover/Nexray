@@ -329,7 +329,7 @@ if analyze_clicked:
         # Run inference
         with st.spinner(""):
             st.markdown(
-                """
+                f"""
                 <div class="custom-spinner">
                     <div class="ring"></div>
                 </div>
