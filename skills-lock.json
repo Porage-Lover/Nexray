@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "skills": {
+    "dicom-metadata-extract": {
+      "source": "NVIDIA-Medtech/medical-AI-skills",
+      "sourceType": "github",
+      "skillPath": "skills/dicom-metadata-extract/SKILL.md",
+      "computedHash": "f35f4fe0ded7166ebf2abd57510d8d353cd5fa8348431aff4ede21e9672d4a2b"
+    },
+    "dicom-series-preflight": {
+      "source": "NVIDIA-Medtech/medical-AI-skills",
+      "sourceType": "github",
+      "skillPath": "skills/dicom-series-preflight/SKILL.md",
+      "computedHash": "7eb9218cdc1561738bc707d7e98409f46ee3dea120628f10b9252d091c82531d"
+    },
+    "nv-reason-cxr": {
+      "source": "NVIDIA-Medtech/medical-AI-skills",
+      "sourceType": "github",
+      "skillPath": "skills/nv-reason-cxr/SKILL.md",
+      "computedHash": "e638042f69a25484a16495dfcaaf1bbeac9618f1d97e33e2eb2a09eeb7dfd097"
+    },
+    "nv-segment-ctmr": {
+      "source": "NVIDIA-Medtech/medical-AI-skills",
+      "sourceType": "github",
+      "skillPath": "skills/nv-segment-ctmr/SKILL.md",
+      "computedHash": "71612b72750b3d3ba2a3495753f29c4d3f21c0757f7c60534d28865094e1c6c6"
+    }
+  }
+}
