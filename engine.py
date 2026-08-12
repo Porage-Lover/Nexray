@@ -205,20 +205,43 @@ def chat_followup(
 
 def get_memory_usage() -> str:
     """
-    Returns the current process memory usage as a human-readable string.
-    Uses macOS-native resource module.
+    Returns the true total RSS memory of the Python process tree as a
+    human-readable string. Sums the current process AND all recursive
+    child processes (Streamlit spawns children that share model memory).
+
+    Uses psutil for accurate cross-platform RSS measurement instead of
+    resource.RUSAGE_SELF which only reports the main process.
 
     Returns:
-        Memory usage string like '4.2 GB'.
+        Memory usage string like '5.6 GB'.
     """
     try:
-        import resource
-        # ru_maxrss is in bytes on macOS
-        mem_bytes = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
-        mem_gb = mem_bytes / (1024 ** 3)
+        import psutil
+        proc = psutil.Process(os.getpid())
+        # Sum RSS of main process + all recursive children
+        total_rss = proc.memory_info().rss
+        for child in proc.children(recursive=True):
+            try:
+                total_rss += child.memory_info().rss
+            except (psutil.NoSuchProcess, psutil.AccessDenied):
+                pass
+        mem_gb = total_rss / (1024 ** 3)
         if mem_gb >= 1.0:
             return f"{mem_gb:.1f} GB"
         else:
             return f"{mem_gb * 1024:.0f} MB"
+    except ImportError:
+        # Fallback to resource module if psutil not available
+        try:
+            import resource
+            mem_bytes = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
+            mem_gb = mem_bytes / (1024 ** 3)
+            if mem_gb >= 1.0:
+                return f"{mem_gb:.1f} GB"
+            else:
+                return f"{mem_gb * 1024:.0f} MB"
+        except Exception:
+            return "N/A"
     except Exception:
         return "N/A"
+
