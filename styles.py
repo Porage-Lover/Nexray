@@ -76,6 +76,39 @@ button[kind="header"] span {
     font-weight: 300 !important;
 }
 
+/* Restore Floating Expand Button when Sidebar is Collapsed */
+[data-testid="stSidebarCollapsedControl"] {
+    display: flex !important;
+    visibility: visible !important;
+    position: fixed !important;
+    top: 12px !important;
+    left: 12px !important;
+    z-index: 999999 !important;
+    background-color: rgba(30, 30, 30, 0.85) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 8px !important;
+    padding: 4px !important;
+    cursor: pointer !important;
+}
+
+/* Make the icon inside the collapsed control clearly visible */
+[data-testid="stSidebarCollapsedControl"] span,
+[data-testid="stSidebarCollapsedControl"] button {
+    color: #ffffff !important;
+    font-size: 16px !important;
+    visibility: visible !important;
+}
+
+/* If ligature text breaks inside collapsed control, render a clean fallback icon */
+[data-testid="stSidebarCollapsedControl"] span::after {
+    content: "›" !important;
+    font-size: 20px !important;
+    font-weight: bold !important;
+    color: #0A84FF !important;
+}
+
 /* ============================================
    4. WINDOW MATERIALS (GLASSMORPHISM / VIBRANCY)
    ============================================ */
