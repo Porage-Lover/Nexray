@@ -31,8 +31,8 @@ macos_hig_css = """
    3. CLEAN THE CANVAS
    ============================================ */
 #MainMenu { visibility: hidden !important; }
-header { visibility: hidden !important; display: none !important; }
-footer { visibility: hidden !important; display: none !important; }
+header[data-testid="stHeader"] { background: transparent !important; }
+footer { visibility: hidden !important; }
 .stDeployButton { display: none !important; }
 [data-testid="stToolbar"] { display: none !important; }
 [data-testid="stDecoration"] { display: none !important; }
@@ -43,10 +43,18 @@ footer { visibility: hidden !important; display: none !important; }
    ============================================ */
 /* Sidebar */
 [data-testid="stSidebar"] {
-    background-color: rgba(25, 25, 25, 0.65) !important;
-    backdrop-filter: blur(24px) saturate(180%) !important;
-    -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+    display: block !important;
+    visibility: visible !important;
+    width: 340px !important;
+    min-width: 340px !important;
+    background-color: rgba(18, 18, 18, 0.75) !important;
+    backdrop-filter: blur(20px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
     border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+[data-testid="stSidebarContent"] {
+    visibility: visible !important;
+    padding-top: 1.5rem !important;
 }
 
 /* Metric Containers & Custom Report Cards */
