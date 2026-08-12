@@ -62,10 +62,15 @@ def analyze_image(
     image_path: str,
     prompt: str,
     max_tokens: int = 2048,
-    temperature: float = 0.3,
+    temperature: float = 0.1,
 ) -> tuple[str, float, int]:
     """
     Analyzes a medical image using the loaded HealthGPT-Pro model.
+
+    Strict generation parameters are enforced for clinical determinism:
+    - temp=0.1: Near-zero temperature forces highly deterministic output
+    - top_p=0.85: Restricts to high-probability medical vocabulary
+    - repetition_penalty=1.15: Prevents finding repetition across sections
 
     Args:
         model: The loaded MLX model.
@@ -74,7 +79,7 @@ def analyze_image(
         image_path: Path to the image file to analyze.
         prompt: The clinical prompt/query for the image.
         max_tokens: Maximum number of tokens to generate (default 2048).
-        temperature: Sampling temperature (default 0.3 for clinical accuracy).
+        temperature: Sampling temperature (default 0.1 for clinical determinism).
 
     Returns:
         A tuple of (response_text, inference_time_seconds, token_count).
@@ -95,6 +100,8 @@ def analyze_image(
             image=[image_path],  # Must be a list of paths, not a bare string
             max_tokens=max_tokens,
             temp=temperature,
+            top_p=0.85,
+            repetition_penalty=1.15,
         )
     except Exception as e:
         return f"Error during model inference: {str(e)}", 0.0, 0
@@ -121,7 +128,7 @@ def chat_followup(
     report_context: str = "",
     image_path: str = None,
     max_tokens: int = 1024,
-    temperature: float = 0.4,
+    temperature: float = 0.15,
 ) -> tuple[str, float]:
     """
     Handles a follow-up question in the clinical copilot chat.
@@ -170,7 +177,12 @@ def chat_followup(
     import time
     start_time = time.time()
     try:
-        kwargs = {"max_tokens": max_tokens, "temp": temperature}
+        kwargs = {
+            "max_tokens": max_tokens,
+            "temp": temperature,
+            "top_p": 0.85,
+            "repetition_penalty": 1.15,
+        }
         if image_path and os.path.exists(image_path):
             result = generate(model, processor, formatted_prompt, image=[image_path], **kwargs)
         else:

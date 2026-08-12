@@ -1,0 +1,34 @@
+AMERICAN COLLEGE OF RADIOLOGY (ACR) AND NEUROLUMBAR GUIDELINES:
+CT AND MRI NEUROIMAGING PROTOCOLS AND DIAGNOSTIC CRITERIA
+
+1. ACUTE ISCHEMIC STROKE PROTOCOL
+Time-critical imaging for acute stroke presentation follows a multi-modality approach:
+- Non-Contrast CT (NCCT): Must be performed within 25 minutes of arrival to exclude intracranial hemorrhage, establish baseline ASPECT score (Alberta Stroke Program Early CT Score), and identify early ischemic changes (hyperdense MCA sign, loss of insular ribbon, sulcal effacement).
+- CT Angiography (CTA): Immediately follows NCCT to identify Large Vessel Occlusion (LVO) in the anterior (ICA, M1/M2 MCA) or posterior (basilar, PCA) circulation, evaluating collateral flow.
+- CT Perfusion (CTP): Assesses salvageable ischemic penumbra versus non-viable infarct core (CBV <30% core; CBF/Tmax >6s penumbra) to guide mechanical thrombectomy in extended time windows (6-24 hours).
+
+2. INTRACRANIAL HEMORRHAGE CLASSIFICATION
+- Epidural Hemorrhage (EDH): Hyperdense biconvex/lentiform extra-axial fluid collection, typically arterial (middle meningeal artery rupture), limited by cranial sutures.
+- Subdural Hemorrhage (SDH): Crescentic extra-axial collection crossing suture lines but restricted by dural reflections, caused by bridging vein rupture. Crescent density varies by acuity (hyperdense acute, isodense subacute, hypodense chronic).
+- Subarachnoid Hemorrhage (SAH): Hyperdensity within sulci and basal cisterns, most commonly secondary to trauma or ruptured saccular aneurysm.
+- Intraparenchymal Hemorrhage (IPH): Focal collection within brain parenchyma caused by hypertension (basal ganglia/thalamus), amyloid angiopathy (lobar), or vascular malformation.
+
+3. MASS EFFECT, MIDLINE SHIFT, AND HYDROCEPHALUS
+- Midline Shift: Measured as septum pellucidum displacement relative to the falx cerebri. Shift >5 mm represents critical intracranial hypertension requiring urgent neurosurgical evaluation.
+- Hydrocephalus: Delineates Obstructive (non-communicating, e.g., aqueductal stenosis with third/lateral ventricle enlargement and normal fourth ventricle) versus Communicating (impaired resorption, all ventricles enlarged). Look for transependymal CSF migration (periventricular hypoattenuation/hypointensity).
+
+4. MRI SEQUENCES & PATHOLOGY CHARACTERIZATION
+- T1-Weighted: Anatomical detail; CSF dark, fat bright. T1 with gadolinium contrast evaluates blood-brain barrier breakdown (tumors, infection, active demyelination).
+- T2-Weighted: Pathology detection; CSF and edema bright.
+- FLAIR (Fluid Attenuated Inversion Recovery): Suppresses free CSF signal to highlight periventricular lesions, edema, and subarachnoid space pathology.
+- DWI / ADC (Diffusion-Weighted Imaging / Apparent Diffusion Coefficient): Essential for stroke detection. Cytotoxic edema causes hyperintensity on DWI with corresponding hypointensity ("restriction") on ADC map.
+
+5. WHITE MATTER DISEASE AND FAZEKAS SCALE
+Leukoaraiosis and microvascular ischemic disease are graded via the Fazekas Scale:
+- Grade 0: Absence of lesions.
+- Grade 1: Caps or pencil-thin lining in periventricular area, or punctate deep white matter foci.
+- Grade 2: Smooth periventricular halo, or early confluent deep white matter lesions.
+- Grade 3: Irregular periventricular lesions extending into deep white matter, or large confluent foci.
+
+6. SPINAL IMAGING INDICATIONS
+MRI Spine without contrast is indicated for red flag symptoms: progressive neurological deficits, cauda equina syndrome, suspected spinal infection (discitis/osteomyelitis), neoplasm, or unremitting radiculopathy after 6 weeks of conservative therapy. Plain CT is preferred for acute bony trauma.

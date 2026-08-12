@@ -25,6 +25,7 @@ from engine import get_model, analyze_image, chat_followup, get_memory_usage
 from database import init_database, save_report, get_all_reports
 from pdf_export import generate_pdf
 from fhir_export import generate_fhir_json
+from rag import load_guidelines, retrieve_context
 
 
 # ── Page Configuration ──────────────────────────────────────
@@ -43,6 +44,14 @@ DB_PATH = "./data/reports.db"
 
 # ── Initialize Database ────────────────────────────────────
 init_database(DB_PATH)
+
+# ── Initialize Clinical RAG ────────────────────────────────
+@st.cache_resource
+def get_rag_retriever():
+    """Loads and indexes clinical guidelines once per session."""
+    return load_guidelines()
+
+rag_retriever = get_rag_retriever()
 
 # ── Session State ───────────────────────────────────────────
 defaults = {
@@ -303,12 +312,19 @@ if analyze_clicked:
                 patient_info_str += ", "
             patient_info_str += f"Name: {patient_name}"
 
-        # Build prompt
+        # Build prompt with RAG context
+        rag_context = retrieve_context(
+            rag_retriever,
+            modality=modality,
+            clinical_context=clinical_context,
+        )
         prompt = build_combined_prompt(
             modality=modality,
             clinical_context=clinical_context,
             patient_info=patient_info_str,
+            rag_context=rag_context,
         )
+        rag_active = bool(rag_context)
 
         # Run inference
         with st.spinner(""):
@@ -319,6 +335,7 @@ if analyze_clicked:
                 </div>
                 <p style="text-align:center; color:#555; font-size:0.85rem; margin-top:-1rem;">
                     Analyzing image with HealthGPT-Pro on Apple Silicon...
+                    {"<br><span style='color:#00d4aa; font-size:0.75rem;'>📚 Clinical RAG active — guidelines injected</span>" if rag_active else ""}
                 </p>
                 """,
                 unsafe_allow_html=True,

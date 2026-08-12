@@ -1,0 +1,34 @@
+AMERICAN COLLEGE OF RADIOLOGY (ACR) APPROPRIATENESS CRITERIA:
+CHEST RADIOGRAPH INTERPRETATION AND DIAGNOSTIC GUIDELINES
+
+1. SYSTEMATIC REVIEW METHODOLOGY (ABCDEF APPROACH)
+To minimize satisfaction of search and diagnostic errors, chest radiographs must be evaluated using a structured, systematic sequence:
+- A (Airways): Tracheal position, carinal angle, mainstem bronchi patency.
+- B (Bones & Soft Tissues): Ribs, clavicles, scapulae, spine, chest wall symmetry, subcutaneous air.
+- C (Cardiac & Vessels): Cardiothoracic ratio (CTR), cardiac silhouette contours, aortic arch, hilar vessels.
+- D (Diaphragm): Height, contour, costophrenic angles, subdiaphragmatic free air.
+- E (Effusions & Pleura): Pleural thickening, fluid collections, blunting of angles.
+- F (Fields - Lungs): Symmetry, lucency, vascular markings, consolidations, nodules, interstitial patterns.
+
+2. PNEUMONIA PATTERNS AND INFILTRATES
+- Lobar Pneumonia: Homogeneous consolidation confined to a single lobe, demonstrating air bronchograms and anatomical margin alignment (e.g., Streptococcus pneumoniae).
+- Bronchopneumonia: Patchy multifocal opacities centered around bronchioles, often bilateral and asymmetrical (e.g., Staphylococcus aureus, Gram-negative bacilli).
+- Interstitial Pneumonia: Reticular or reticulonodular opacities with diffuse, bilateral distribution, minimal consolidation (e.g., Mycoplasma pneumoniae, viral etiologies).
+
+3. PLEURAL PATHOLOGY AND PNEUMOTHORAX
+- Pneumothorax: Identified by a distinct visceral pleural line displaced from the chest wall with absent peripheral lung markings. In supine patients, evaluate for the "deep sulcus sign" (abnormally deep, lucent costophrenic angle).
+- Pleural Effusion: Early effusion presents with blunting of the posterior costophrenic angle (lateral view >50 mL, PA view >175 mL), forming a characteristic meniscus sign. Subpulmonic effusions cause apparent diaphragmatic elevation. Decubitus views demonstrate fluid layering (>10 mm thickness confirms free-flowing fluid suitable for thoracentesis).
+
+4. CARDIOMEGALY AND MEDIASTINAL ASSESSMENT
+- Cardiomegaly: Defined as a Cardiothoracic Ratio (CTR) >0.50 on a posteroanterior (PA) projection. Note: AP views artificially magnify cardiac size.
+- Mediastinal Widening: Mediastinal width >8 cm on PA view or >6 cm at aortic knob. Differential diagnosis includes thoracic aortic aneurysm/dissection, mediastinal hematoma, lymphadenopathy, lymphoma, and acute mediastinitis.
+
+5. PULMONARY NODULES AND FLEISCHNER CRITERIA
+Solid nodules >6 mm in patients ≥35 years require management based on Fleischner Society guidelines:
+- Low-Risk (<6 mm): No routine follow-up required unless high clinical risk.
+- 6-8 mm Nodule: CT at 6-12 months, then consider CT at 18-24 months.
+- >8 mm Nodule: Consider CT at 3 months, PET/CT, or tissue biopsy.
+
+6. ATELECTASIS AND COPD SIGNS
+- Atelectasis: Volume loss signs include displacement of fissures, elevation of the ipsilateral hemidiaphragm, tracheal deviation toward the collapse, and crowded vascular markings.
+- COPD/Emphysema: Hyperinflation (flattened diaphragms, >10 posterior ribs visible), retrosternal space expansion (>2.5 cm on lateral), barrel chest, bullae, and pruned peripheral vascular markings.

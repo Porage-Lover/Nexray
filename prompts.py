@@ -12,14 +12,21 @@ MODALITIES = [
 ]
 
 
-def build_structured_prompt(modality: str, clinical_context: str = "", patient_info: str = "") -> str:
+def build_structured_prompt(
+    modality: str,
+    clinical_context: str = "",
+    patient_info: str = "",
+    rag_context: str = "",
+) -> str:
     """
-    Builds a detailed clinical prompt that instructs the model to output a structured report.
+    Builds a hardened clinical prompt with negative constraints, standard-of-care
+    guardrails, and optional RAG-retrieved guideline context.
 
     Args:
         modality: The imaging modality (e.g., "X-ray", "MRI").
         clinical_context: Optional clinical context provided by the clinician.
         patient_info: Optional patient information string.
+        rag_context: Optional retrieved clinical guideline text from the RAG system.
 
     Returns:
         A formatted prompt string for structured clinical analysis.
@@ -32,6 +39,35 @@ def build_structured_prompt(modality: str, clinical_context: str = "", patient_i
         prompt += f"Patient Information: {patient_info}\n"
     if clinical_context:
         prompt += f"Clinical Context: {clinical_context}\n"
+
+    # ── Standard-of-Care Guardrails ──────────────────────────
+    prompt += (
+        "\n=== CLINICAL DECISION RULES (MANDATORY) ===\n"
+        "1. In cases of traumatic wrist pain where no acute fracture is visible on a standard "
+        "AP/Lateral X-ray, you MUST explicitly include 'Occult Scaphoid Fracture' in your "
+        "differential diagnosis and mandate 'Follow-up Oblique Views or MRI within 10-14 days' "
+        "in your recommended actions. Do NOT default to a simple sprain without noting this risk.\n"
+        "2. For chest imaging: always check for pneumothorax, pleural effusion, mediastinal "
+        "widening, and cardiomegaly. If any is absent, explicitly state 'No evidence of [finding].'\n"
+        "3. For any imaging modality: if the image quality is suboptimal (rotation, exposure, "
+        "positioning), note this limitation FIRST in your findings.\n"
+        "4. NEVER state 'normal study' without listing at least 3 specific anatomical structures "
+        "you evaluated to reach that conclusion.\n"
+        "5. For every finding, provide a confidence percentage (0-100%). For differential "
+        "diagnoses, assign severity: CRITICAL, HIGH, MODERATE, or LOW.\n"
+        "=== END CLINICAL RULES ===\n"
+    )
+
+    # ── RAG Context (if available) ───────────────────────────
+    if rag_context:
+        prompt += (
+            "\n=== CLINICAL GUIDELINE REFERENCE ===\n"
+            "The following evidence-based clinical guidelines are relevant to this case. "
+            "You MUST consider these guidelines when formulating your differential diagnosis "
+            "and recommendations. Cite specific guideline recommendations where applicable.\n\n"
+            f"{rag_context}\n"
+            "=== END GUIDELINE REFERENCE ===\n"
+        )
 
     prompt += (
         "\nAnalyze the provided image thoroughly but concisely. "
@@ -75,7 +111,12 @@ def build_narrative_prompt(modality: str, clinical_context: str = "", patient_in
     return prompt
 
 
-def build_combined_prompt(modality: str, clinical_context: str = "", patient_info: str = "") -> str:
+def build_combined_prompt(
+    modality: str,
+    clinical_context: str = "",
+    patient_info: str = "",
+    rag_context: str = "",
+) -> str:
     """
     Combines both structured and narrative prompts into a single prompt.
 
@@ -87,11 +128,14 @@ def build_combined_prompt(modality: str, clinical_context: str = "", patient_inf
         modality: The imaging modality (e.g., "X-ray", "MRI").
         clinical_context: Optional clinical context provided by the clinician.
         patient_info: Optional patient information string.
+        rag_context: Optional RAG-retrieved clinical guideline context.
 
     Returns:
         A combined prompt string for both structured and narrative output.
     """
-    structured_part = build_structured_prompt(modality, clinical_context, patient_info)
+    structured_part = build_structured_prompt(
+        modality, clinical_context, patient_info, rag_context=rag_context
+    )
     prompt = structured_part + (
         "\n\nAfter outputting the structured report exactly as specified above, "
         "add a separator line consisting exactly of '---'.\n"

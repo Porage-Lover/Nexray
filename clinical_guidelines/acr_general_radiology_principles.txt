@@ -1,0 +1,37 @@
+AMERICAN COLLEGE OF RADIOLOGY (ACR) GENERAL RADIOLOGY PRACTICE PARAMETERS:
+QUALITY STANDARDS, RADIATION SAFETY, AND REPORTING GUIDELINES
+
+1. RADIATION PROTECTION AND ALARA PRINCIPLE
+All ionizing radiation procedures must strictly adhere to the ALARA (As Low As Reasonably Achievable) principle. Imaging facilities must employ optimization strategies including parameter adjustment based on patient size (e.g., pediatric protocols), automatic exposure control (AEC), iterative reconstruction algorithms in CT, and strict justification of clinical indications to prevent unnecessary radiation exposure.
+
+2. IMAGE QUALITY ASSESSMENT CRITERIA
+Prior to diagnostic interpretation, every radiograph must be verified against rigorous quality metrics:
+- Rotation: Verified via anatomical symmetry (e.g., sternoclavicular joints equidistant from spinous processes on chest radiograph).
+- Exposure: Proper penetration allowing clear visualization of vascular structures and bony architecture without over-penetration (burnout) or under-penetration (quantum mottle).
+- Motion & Artifacts: Absence of motion blur, metallic objects, external clothing artifacts, or grid lines that obscure anatomical structures.
+
+3. STRUCTURED REPORTING & ACR COMMUNICATION GUIDELINES
+Radiology reports must follow ACR Practice Parameters for Communication of Diagnostic Imaging Findings:
+- Demographics & Clinical History: Patient identifier, requesting physician, relevant clinical context, and clinical question.
+- Technical Details: Procedure description, view count, contrast administration (dose, route, type), and comparison studies.
+- Findings: Concise, structured description using standardized terminology.
+- Impression: Definitive diagnosis or prioritized differential diagnosis directly addressing the clinical indication, accompanied by clear recommendations for further diagnostic evaluation or follow-up when indicated.
+
+4. CRITICAL FINDINGS NOTIFICATION PROTOCOL
+Radiologists must provide direct, documented communication of critical or emergent findings to the referring clinician or appropriate care team member within established target timelines:
+- Category 1 (Emergent): Life-threatening conditions (e.g., tension pneumothorax, active intracranial hemorrhage, aortic dissection, free intraperitoneal air) require immediate verbal communication within 30-60 minutes, documented in the report with caller name, date, and timestamp.
+- Category 2 (Urgent): Conditions requiring prompt medical attention (e.g., new pulmonary embolism, acute appendicitis, unreduced dislocation) require contact within 2-4 hours.
+
+5. INCIDENTAL FINDINGS MANAGEMENT
+Incidental findings must be managed using ACR Incidental Findings Committee White Papers to prevent unnecessary downstream workups:
+- Renal Cysts: Bosniak Classification system to guide monitoring versus surgical management.
+- Adrenal Incidentalomas: Hounsfield Unit (HU) measurement on unenhanced CT; lesions ≤10 HU with uniform low density are benign adenomas requiring no further evaluation.
+- Thyroid & Liver Lesions: Size, imaging features, and risk stratification determine management thresholds for ultrasound/MRI follow-up versus biopsy.
+
+6. CONTRAST MEDIA SAFETY AND EGFR THRESHOLDS
+- Contrast-Induced Acute Kidney Injury (CI-AKI): Assess eGFR prior to iodinated contrast administration. eGFR <30 mL/min/1.73m^2 requires risk-benefit assessment and volume expansion (IV 0.9% normal saline).
+- Nephrogenic Systemic Fibrosis (NSF): Group II gadolinium-based contrast agents (GBCAs) should be used in patients with severe renal impairment (eGFR <30 mL/min/1.73m^2) due to negligible NSF risk.
+- Premedication Protocol: Elective premedication for prior moderate/severe allergic-like reactions consists of Oral Prednisone (50 mg at 13, 7, and 1 hour prior) plus Diphenhydramine (50 mg 1 hour prior).
+
+7. COMPARATIVE STUDY CORRELATION
+Diagnostic accuracy requires diligent comparison with prior imaging studies (radiographs, CT, MRI, US). Documenting interval changes (resolution, progression, stability) provides vital prognostic context and significantly reduces diagnostic error rates.

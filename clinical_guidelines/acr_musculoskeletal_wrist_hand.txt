@@ -1,0 +1,26 @@
+AMERICAN COLLEGE OF RADIOLOGY (ACR) APPROPRIATENESS CRITERIA:
+ACUTE HAND AND WRIST TRAUMA EVALUATION AND MANAGEMENT PROTOCOL
+
+1. INITIAL RADIOGRAPHIC EVALUATION
+Standard initial radiographic evaluation for suspected acute hand and wrist trauma includes a minimum four-view series: Anteroposterior (AP), Lateral, Oblique, and dedicated Scaphoid views (PA view with ulnar deviation and 20-degree proximal tube angulation). Standard positioning ensures accurate assessment of carpal alignment, joint spaces, and cortical integrity.
+
+2. CLINICAL DECISION RULES AND SCAPHOID FRACTURE PROTOCOL
+Application of validated clinical rules, including Ottawa Wrist Rules, helps guide initial imaging decisions. Clinical examination must focus on point tenderness, specifically point tenderness over the anatomical snuffbox, scaphoid tubercle, or axial loading of the thumb, which carries high sensitivity for scaphoid fractures. 
+
+If initial radiography is negative or equivocal despite clinical suspicion of a scaphoid or occult carpal fracture:
+- Immediate Advanced Imaging: Non-contrast MRI of the wrist is the gold standard for immediate detection of radiographically occult scaphoid and carpal fractures, demonstrating microtrabecular edema on T2/STIR sequences. Alternatively, high-resolution non-contrast CT can evaluate cortical disruption.
+- Conservative Management Protocol: If MRI/CT is unavailable immediately, immobilize the patient in a thumb spica cast for 10-14 days, followed by repeat clinical examination and follow-up radiographs (including repeat dedicated scaphoid and oblique views). If pain persists and follow-up radiographs remain negative, MRI or CT must be performed.
+
+3. DISTAL RADIUS FRACTURE CLASSIFICATION
+Distal radius fractures are categorized based on mechanism, intra-articular extension, and displacement pattern:
+- Colles Fracture: Extra-articular fracture of the distal radial metaphysis with dorsal displacement/angulation of the distal fragment, typically resulting from a fall on an outstretched hand (FOOSH).
+- Smith Fracture: Volar displacement/angulation of the distal radial fragment ("reverse Colles"), often resulting from a fall on a flexed wrist.
+- Barton Fracture: Intra-articular fracture-dislocation of the radiocarpal joint with displacement of the articular surface along with the carpus (dorsal or volar variants).
+
+4. CARPAL INSTABILITY PATTERNS
+Radiographic alignment on lateral views requires measuring the scapholunate angle (normal 30-60°) and capitolunate angle (normal <30°):
+- Dorsal Intercalated Segment Instability (DISI): Scapholunate ligament disruption causing the lunate to tilt dorsally (scapholunate angle >60°). Often accompanied by widening of the scapholunate interval (>3 mm on AP view, "Terry Thomas sign").
+- Volar Intercalated Segment Instability (VISI): Lunotriquetral ligament disruption causing the lunate to tilt volarly (scapholunate angle <30°, capitolunate angle >30°).
+
+5. SOFT TISSUE INJURY DIFFERENTIAL
+When cortical alignment is normal, consider soft tissue injuries including scapholunate advanced collapse (SLAC), triangular fibrocartilage complex (TFCC) tears, tendon ruptures (extensor pollicis longus, flexor carpi radialis), and gamekeeper's/skier's thumb (ulnar collateral ligament rupture of the 1st MCP joint). MRI or ultrasound is indicated for definitive soft tissue evaluation.
