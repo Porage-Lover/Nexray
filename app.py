@@ -13,7 +13,7 @@ import numpy as np
 from PIL import Image, ImageEnhance, ImageOps, ImageDraw
 import streamlit as st
 
-from styles import inject_custom_css
+from styles import macos_hig_css
 from prompts import (
     MODALITIES,
     build_combined_prompt,
@@ -37,7 +37,7 @@ st.set_page_config(
 )
 
 # ── Inject Custom CSS ───────────────────────────────────────
-inject_custom_css()
+st.markdown(macos_hig_css, unsafe_allow_html=True)
 
 # ── Constants ───────────────────────────────────────────────
 DB_PATH = "./data/reports.db"
