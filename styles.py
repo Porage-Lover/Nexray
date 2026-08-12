@@ -42,7 +42,7 @@ p, h1, h2, h3, h4, h5, h6, label, input, textarea, select, .stMarkdown, div[data
 }
 
 .main .block-container {
-    padding-top: 2rem !important;
+    padding-top: 0.5rem !important;
     padding-bottom: 60px !important;
     max-width: 1200px !important;
 }
@@ -82,22 +82,11 @@ button[kind="header"] span {
     font-weight: 300 !important;
 }
 
-/* Restore Floating Expand Button when Sidebar is Collapsed */
+/* Ensure Expand Button is accessible without trapping state */
 [data-testid="collapsedControl"],
 [data-testid="stSidebarCollapsedControl"] {
-    display: flex !important;
-    visibility: visible !important;
-    position: fixed !important;
-    top: 12px !important;
-    left: 12px !important;
-    z-index: 999999 !important;
-    background-color: rgba(30, 30, 30, 0.85) !important;
-    backdrop-filter: blur(12px) !important;
-    -webkit-backdrop-filter: blur(12px) !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
-    border-radius: 8px !important;
-    padding: 4px !important;
     cursor: pointer !important;
+    z-index: 999999 !important;
 }
 
 /* Make the icon inside the collapsed control clearly visible */
@@ -124,15 +113,12 @@ button[kind="header"] span {
    ============================================ */
 /* Sidebar */
 [data-testid="stSidebar"] {
-    display: block !important;
-    visibility: visible !important;
     background-color: rgba(18, 18, 18, 0.75) !important;
     backdrop-filter: blur(20px) saturate(180%) !important;
     -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
     border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 [data-testid="stSidebarContent"] {
-    visibility: visible !important;
     padding-top: 1.5rem !important;
 }
 
