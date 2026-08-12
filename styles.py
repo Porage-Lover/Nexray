@@ -51,7 +51,13 @@ p, h1, h2, h3, h4, h5, h6, label, input, textarea, select, .stMarkdown, div[data
    3. CLEAN THE CANVAS & NUCLEAR ICON FALLBACK
    ============================================ */
 #MainMenu { visibility: hidden !important; }
-header[data-testid="stHeader"] { background-color: transparent !important; }
+header[data-testid="stHeader"] { 
+    background-color: transparent !important; 
+    pointer-events: none !important; /* Prevent transparent header from blocking clicks */
+}
+header[data-testid="stHeader"] * {
+    pointer-events: auto !important; /* Allow buttons inside header to be clicked */
+}
 footer { visibility: hidden !important; }
 .stDeployButton { display: none !important; }
 [data-testid="stToolbar"] { display: none !important; }
@@ -77,6 +83,7 @@ button[kind="header"] span {
 }
 
 /* Restore Floating Expand Button when Sidebar is Collapsed */
+[data-testid="collapsedControl"],
 [data-testid="stSidebarCollapsedControl"] {
     display: flex !important;
     visibility: visible !important;
@@ -94,6 +101,8 @@ button[kind="header"] span {
 }
 
 /* Make the icon inside the collapsed control clearly visible */
+[data-testid="collapsedControl"] span,
+[data-testid="collapsedControl"] button,
 [data-testid="stSidebarCollapsedControl"] span,
 [data-testid="stSidebarCollapsedControl"] button {
     color: #ffffff !important;
@@ -102,6 +111,7 @@ button[kind="header"] span {
 }
 
 /* If ligature text breaks inside collapsed control, render a clean fallback icon */
+[data-testid="collapsedControl"] span::after,
 [data-testid="stSidebarCollapsedControl"] span::after {
     content: "›" !important;
     font-size: 20px !important;
