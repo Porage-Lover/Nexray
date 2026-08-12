@@ -242,7 +242,7 @@ with st.sidebar:
     # Analyze button
     analyze_clicked = False
     st.markdown('<div class="analyze-btn">', unsafe_allow_html=True)
-    if st.button("⚡  Analyze Image", use_container_width=True):
+    if st.button("⚡  Analyze Image", width="stretch"):
         analyze_clicked = True
     st.markdown("</div>", unsafe_allow_html=True)
 
@@ -432,7 +432,7 @@ if st.session_state.report_data and uploaded_file:
         display_img = apply_image_adjustments(img)
         if st.session_state.show_bbox:
             display_img = draw_roi_overlay(display_img)
-        st.image(display_img, use_container_width=True)
+        st.image(display_img, width="stretch")
 
         # Image metadata
         w, h = img.size
@@ -538,7 +538,7 @@ if st.session_state.report_data and uploaded_file:
                     data=pdf_bytes,
                     file_name=filename,
                     mime="application/pdf",
-                    use_container_width=True,
+                    width="stretch",
                 )
                 st.markdown("</div>", unsafe_allow_html=True)
             except Exception as e:
@@ -563,7 +563,7 @@ if st.session_state.report_data and uploaded_file:
                     data=fhir_json,
                     file_name=fhir_filename,
                     mime="application/json",
-                    use_container_width=True,
+                    width="stretch",
                 )
                 st.markdown("</div>", unsafe_allow_html=True)
             except Exception as e:
@@ -578,7 +578,7 @@ if st.session_state.report_data and uploaded_file:
                 f"NARRATIVE:\n{report.get('narrative', 'N/A')}"
             )
             st.markdown('<div class="ghost-btn">', unsafe_allow_html=True)
-            if st.button("📋  Copy Report", use_container_width=True):
+            if st.button("📋  Copy Report", width="stretch"):
                 st.code(full_report_text, language=None)
                 st.info("Report text displayed above — copy it from there.")
             st.markdown("</div>", unsafe_allow_html=True)

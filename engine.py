@@ -4,6 +4,14 @@ Optimized for Apple Silicon with 4-bit quantized model.
 """
 import os
 import time
+import logging
+import warnings
+
+# Suppress harmless docstring validation warnings from transformers for
+# unrelated model processors (DeepseekVL, Kimi, PaddleOCR, etc.)
+logging.getLogger("transformers").setLevel(logging.CRITICAL)
+warnings.filterwarnings("ignore", message=".*is part of.*not documented.*")
+
 import streamlit as st
 from mlx_vlm import load, generate
 from mlx_vlm.prompt_utils import apply_chat_template
