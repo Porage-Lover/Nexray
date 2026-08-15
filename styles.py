@@ -1,5 +1,5 @@
 """
-Custom macOS HIG (Human Interface Guidelines) CSS injection for Hack4Health Streamlit UI.
+Custom macOS HIG (Human Interface Guidelines) CSS injection for Nexray Streamlit UI.
 """
 
 macos_hig_css = """

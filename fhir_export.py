@@ -1,5 +1,5 @@
 """
-FHIR R4 DiagnosticReport export for Hack4Health.
+FHIR R4 DiagnosticReport export for Nexray.
 Generates HL7 FHIR-compliant JSON without external dependencies.
 """
 import json
@@ -113,7 +113,7 @@ def generate_fhir_json(
                     "issued": now,
                     "performer": [
                         {
-                            "display": "Hack4Health Sovereign Clinical AI",
+                            "display": "Nexray Sovereign Clinical AI",
                             "type": "Organization",
                         }
                     ],
@@ -130,7 +130,7 @@ def generate_fhir_json(
                     else [],
                     "extension": [
                         {
-                            "url": "http://hack4health.ai/fhir/StructureDefinition/ai-metadata",
+                            "url": "http://nexray.ai/fhir/StructureDefinition/ai-metadata",
                             "extension": [
                                 {
                                     "url": "engine",
@@ -160,7 +160,7 @@ def generate_fhir_json(
                     "id": patient_ref_id,
                     "identifier": [
                         {
-                            "system": "http://hack4health.ai/patient-id",
+                            "system": "http://nexray.ai/patient-id",
                             "value": patient_id if patient_id and patient_id != "N/A" else "UNKNOWN",
                         }
                     ],

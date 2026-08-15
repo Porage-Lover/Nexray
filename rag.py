@@ -1,5 +1,5 @@
 """
-Offline Clinical RAG (Retrieval-Augmented Generation) for Hack4Health.
+Offline Clinical RAG (Retrieval-Augmented Generation) for Nexray.
 
 Uses BM25 text retrieval to search local clinical guideline documents and inject
 relevant evidence-based context into the HealthGPT-Pro prompt before inference.

@@ -262,7 +262,7 @@ with st.sidebar:
             st.download_button(
                 label="📥 Export JSON",
                 data=json.dumps(past_reports, indent=2),
-                file_name="hack4health_reports_export.json",
+                file_name="nexray_reports_export.json",
                 mime="application/json",
                 width="stretch",
             )

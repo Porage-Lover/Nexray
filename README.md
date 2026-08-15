@@ -1,4 +1,4 @@
-# 🏥 Hack4Health — Sovereign Clinical AI
+# 🏥 Nexray — Sovereign Clinical AI
 
 A **fully offline** medical image analysis system powered by **HealthGPT-Pro-8B** running locally on Apple Silicon via MLX. Zero data leakage. Complete patient data sovereignty.
 
@@ -64,7 +64,7 @@ Open [http://localhost:8501](http://localhost:8501) in your browser.
 ## 📁 Project Structure
 
 ```
-Hack4Health/
+Nexray/
 ├── app.py              # Streamlit entry point
 ├── engine.py           # MLX model loading & inference
 ├── prompts.py          # Clinical prompt templates & output parsing
