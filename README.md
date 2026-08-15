@@ -8,11 +8,13 @@ A **fully offline** medical image analysis system powered by **HealthGPT-Pro-8B*
 
 - **100% Offline** — After one-time model download, no internet connection required
 - **Multimodal Medical AI** — Analyzes X-rays, MRIs, CT scans, fundus photography, dermoscopy, and more
+- **Offline Clinical RAG** — Contextualizes AI reasoning with local AAD, ACR, and AAO guidelines
 - **Structured Clinical Reports** — Findings, differential diagnosis, recommended actions, clinical notes
 - **Free-Form Narrative** — Radiologist-style dictation alongside structured data
 - **Confidence Scores** — Each finding includes confidence percentages and severity ratings
 - **Encrypted Storage** — All patient data encrypted at rest with Fernet symmetric encryption
 - **PDF Export** — Enterprise-grade clinical reports with embedded images
+- **FHIR R4 Interoperability** — JSON DiagnosticReport generation for EHR integration
 - **Premium UI** — Dark glassmorphic design with Apple Health aesthetics
 
 ## 🏗️ Architecture
@@ -70,6 +72,9 @@ Nexray/
 ├── prompts.py          # Clinical prompt templates & output parsing
 ├── database.py         # Encrypted SQLite operations
 ├── pdf_export.py       # PDF report generation
+├── fhir_export.py      # FHIR R4 JSON export generation
+├── rag.py              # Offline Retrieval-Augmented Generation for guidelines
+├── clinical_guidelines/# Structured knowledge base (.txt protocols)
 ├── styles.py           # Custom CSS (dark glassmorphism theme)
 ├── setup_model.sh      # Model download & quantization script
 ├── requirements.txt    # Python dependencies
