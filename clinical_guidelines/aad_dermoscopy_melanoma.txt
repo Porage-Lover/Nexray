@@ -1,0 +1,29 @@
+AAD DERMOSCOPY GUIDELINES FOR MELANOMA
+
+# Overview
+The American Academy of Dermatology (AAD) guidelines for the use of dermoscopy focus on distinguishing benign pigmented lesions from malignant melanoma. Dermoscopy improves diagnostic accuracy compared to naked-eye examination.
+
+# The ABCDE Rule
+Clinical warning signs for melanoma:
+- **A - Asymmetry:** One half of the lesion does not match the other.
+- **B - Border Irregularity:** Edges are ragged, notched, or blurred.
+- **C - Color Variation:** Pigmentation is not uniform. Shades of brown, black, red, white, or blue may be present.
+- **D - Diameter:** Greater than 6mm (though some melanomas are diagnosed at smaller sizes).
+- **E - Evolving:** The lesion is changing in size, shape, color, or elevating over time.
+
+# Specific Dermoscopic Structures
+- **Atypical Pigment Networks:** Irregular meshes with thickened, darkened lines and variable spaces. Highly indicative of melanoma.
+- **Blue-White Veil:** Irregular, structureless areas of confluent blue pigmentation with an overlying white "ground-glass" haze. Strongly associated with invasive melanoma.
+- **Atypical Vascular Patterns:** Polymorphous vessels (e.g., linear irregular, dotted, or hairpin vessels) scattered asymmetrically. Common in hypopigmented or amelanotic melanoma.
+- **Irregular Streaks:** Linear pigmentations at the periphery of a lesion extending radially (pseudopods or radial streaming), indicating asymmetrical growth.
+- **Irregular Dots/Globules:** Asymmetrically distributed black or brown dots/globules, particularly at the periphery.
+
+# Common Benign Findings
+- **Typical Pigment Network:** Symmetrical, fading at the periphery.
+- **Comedo-like Openings & Milia-like Cysts:** Classic features of seborrheic keratoses.
+- **Homogeneous Blue Pattern:** Typically seen in benign blue nevi.
+
+# Recommended Actions
+- **Benign Pattern Identified:** No excision needed. Reassure the patient and return to routine skin checks.
+- **Equivocal Lesion (Mild Atypia):** Consider short-term digital dermoscopy follow-up (3-6 months) to monitor for change.
+- **Suspicious for Melanoma (Significant Atypia / ABCDE criteria met):** Complete excisional biopsy with 1-3mm margins is strongly recommended for histopathological confirmation. DO NOT perform superficial shave biopsies on highly suspicious lesions.

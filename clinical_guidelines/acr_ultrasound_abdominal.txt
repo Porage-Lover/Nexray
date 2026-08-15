@@ -1,0 +1,32 @@
+ACR ABDOMINAL ULTRASOUND GUIDELINES
+
+# Overview
+The American College of Radiology (ACR) standardizes criteria for evaluating acute abdominal and pelvic pathology using ultrasound, frequently the first-line imaging modality due to its lack of ionizing radiation and real-time dynamic capabilities.
+
+# Acute Cholecystitis
+Ultrasound is the primary imaging modality for suspected gallbladder disease.
+- **Major Diagnostic Criteria:**
+  - **Gallbladder Wall Thickening:** Wall measuring >3 mm in the fasting state.
+  - **Sonographic Murphy's Sign:** Maximal focal tenderness directly over the sonographically localized gallbladder.
+  - **Gallstones (Cholelithiasis):** Echogenic foci with posterior acoustic shadowing.
+- **Secondary Signs:**
+  - **Pericholecystic Fluid:** Thin sliver of anechoic fluid surrounding the gallbladder.
+  - **Gallbladder Distension:** Transverse diameter >4 cm.
+  - **Sludge:** Echogenic, gravity-dependent bile without acoustic shadowing.
+
+# Acute Appendicitis
+Ultrasound is highly utilized, especially in pediatric and pregnant populations, to rule out appendicitis.
+- **Diagnostic Criteria:**
+  - **Diameter:** Aperistaltic, non-compressible, blind-ended tubular structure measuring >6 mm in outer diameter.
+  - **Target Sign:** Concentric layers of the inflamed appendiceal wall seen in the transverse plane.
+  - **Appendicolith:** Echogenic focus with posterior shadowing within the appendix lumen.
+- **Secondary Signs:**
+  - Surrounding echogenic inflamed pericecal fat (creeping fat).
+  - Free periappendiceal fluid.
+  - Hyperemia on color Doppler imaging.
+
+# Recommended Actions
+- **Positive for Acute Cholecystitis:** Urgent surgical consult for cholecystectomy. Consider antibiotics and supportive care. If ultrasound is equivocal, proceed to HIDA scan.
+- **Positive for Acute Appendicitis:** Surgical consultation for appendectomy.
+- **Equivocal Appendicitis (Appendix not visualized):** In pediatric patients, close clinical observation or MRI. In adults, consider CT abdomen/pelvis with IV contrast.
+- **Normal Findings:** Re-evaluate clinical picture, consider alternative diagnoses (e.g., renal colic, pelvic inflammatory disease, ectopic pregnancy).

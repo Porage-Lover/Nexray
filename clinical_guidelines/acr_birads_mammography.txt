@@ -1,0 +1,28 @@
+ACR BI-RADS MAMMOGRAPHY GUIDELINES
+
+# Overview
+The American College of Radiology (ACR) Breast Imaging-Reporting and Data System (BI-RADS) is a risk assessment and quality assurance tool in mammography, ultrasound, and MRI.
+
+# BI-RADS Categories
+- **BI-RADS 0:** Incomplete. Need additional imaging evaluation (e.g., spot compression, magnification, or ultrasound) or prior mammograms for comparison.
+- **BI-RADS 1:** Negative. Symmetrical and no masses, architectural distortion, or suspicious calcifications. Routine screening.
+- **BI-RADS 2:** Benign. 0% probability of malignancy. Includes calcified fibroadenomas, multiple secretory calcifications, fat-containing lesions. Routine screening.
+- **BI-RADS 3:** Probably Benign. <2% probability of malignancy. Non-palpable, circumscribed mass on a baseline mammogram, focal asymmetry, or cluster of punctate calcifications. Recommended short-interval follow-up (6 months).
+- **BI-RADS 4:** Suspicious. 2% to 94% probability of malignancy. No classic appearance of malignancy but sufficiently suspicious to justify a biopsy.
+  - 4A: Low suspicion (2% to 10%)
+  - 4B: Moderate suspicion (11% to 50%)
+  - 4C: High suspicion (51% to 94%)
+- **BI-RADS 5:** Highly Suggestive of Malignancy. ≥95% probability of malignancy. Classic signs like spiculated, irregular high-density masses, fine linear or branching calcifications. Tissue diagnosis required.
+- **BI-RADS 6:** Known Biopsy-Proven Malignancy. Used for imaging studies acquired prior to surgical excision.
+
+# Key Findings and Morphology
+- **Microcalcifications:** Suspicious morphologies include amorphous, coarse heterogeneous, fine pleomorphic, and fine linear or fine linear branching.
+- **Mass Margins:** Spiculated, indistinct, or microlobulated margins carry a higher risk of malignancy compared to circumscribed margins.
+- **Architectural Distortion:** Disruption of normal breast architecture without a visible mass. Highly suspicious, often warranting biopsy or further evaluation.
+
+# Recommended Actions
+- **Category 0:** Recall patient for additional imaging.
+- **Category 1 & 2:** Return to routine screening protocols (typically annual).
+- **Category 3:** Short-interval follow-up, typically unilateral mammography at 6 months.
+- **Category 4 & 5:** Tissue diagnosis is recommended (e.g., ultrasound-guided core biopsy, stereotactic biopsy).
+- **Category 6:** Proceed with definitive surgical or oncological management.

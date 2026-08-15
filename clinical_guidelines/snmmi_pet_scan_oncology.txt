@@ -1,0 +1,31 @@
+SNMMI PET/CT ONCOLOGY GUIDELINES
+
+# Overview
+The Society of Nuclear Medicine and Molecular Imaging (SNMMI) provides criteria for the use of 18F-FDG PET/CT in oncology. It evaluates the altered glucose metabolism of tumors for staging, restaging, and assessing treatment response.
+
+# SUVmax Interpretation
+- **SUV (Standardized Uptake Value):** A semi-quantitative measure of radiotracer concentration. 
+- **SUVmax:** The single hottest pixel within a region of interest. It is highly dependent on patient body weight, injected dose, and uptake time.
+- **Pathologic Uptake:** Malignant cells generally exhibit increased glycolysis. An SUVmax significantly higher than surrounding background tissue (often >2.5 to 3.0, though highly variable depending on tumor type) is suspicious for malignancy.
+- **Physiologic Uptake:** Brain, myocardium, urinary tract (kidneys, ureters, bladder), liver, and vocal cords normally concentrate FDG. Brown fat activation can cause intense, symmetric neck and supraclavicular uptake.
+
+# Determining Metabolic Response to Therapy
+PET/CT is crucial for assessing response to chemotherapy and immunotherapy, notably in lymphomas and solid tumors.
+
+## Deauville Criteria (Lymphoma)
+Uses a 5-point scale comparing residual tumor uptake to normal reference organs:
+- **Score 1:** No uptake above background.
+- **Score 2:** Uptake ≤ mediastinal blood pool (MBP).
+- **Score 3:** Uptake > MBP but ≤ liver.
+- **Score 4:** Uptake moderately > liver.
+- **Score 5:** Uptake markedly higher than liver and/or new lesions.
+
+**Interpretation:**
+- Scores 1, 2, and 3: Complete metabolic response (CMR).
+- Scores 4 and 5: Treatment failure, residual disease, or progression.
+
+# Recommended Actions
+- **Suspicious Isolated Uptake:** Correlation with diagnostic CT or MRI. Consider image-guided biopsy to confirm malignancy.
+- **Physiologic Uptake / Artifacts:** Reassure, utilize warming protocols to reduce brown fat uptake in future scans.
+- **Complete Metabolic Response (Deauville 1-3):** Continue routine clinical and imaging surveillance.
+- **Progressive Disease / High Residual Uptake (Deauville 4-5):** Alter systemic therapy regimen, consider radiation therapy or salvage surgery. Evaluate for biopsy to confirm refractory disease versus inflammatory reaction.

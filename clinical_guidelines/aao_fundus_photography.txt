@@ -1,0 +1,33 @@
+AAO FUNDUS PHOTOGRAPHY GUIDELINES
+
+# Overview
+The American Academy of Ophthalmology (AAO) utilizes fundus photography to screen, diagnose, and monitor retinal diseases, most notably Diabetic Retinopathy (DR) and Age-Related Macular Degeneration (AMD).
+
+# Diabetic Retinopathy (DR) Grading
+Diabetic retinopathy is broadly classified into non-proliferative and proliferative stages.
+
+## Non-Proliferative Diabetic Retinopathy (NPDR)
+- **Mild NPDR:** Microaneurysms only.
+- **Moderate NPDR:** More than just microaneurysms, but less than severe NPDR. May include dot-and-blot hemorrhages, hard exudates (lipid deposits), and cotton wool spots (retinal nerve fiber layer infarctions).
+- **Severe NPDR:** Defined by the 4-2-1 rule:
+  - 4 quadrants of severe intraretinal hemorrhages OR
+  - 2 quadrants of definite venous beading OR
+  - 1 quadrant of prominent intraretinal microvascular abnormalities (IRMA).
+  No signs of proliferative retinopathy.
+
+## Proliferative Diabetic Retinopathy (PDR)
+- Hallmarked by neovascularization (new, abnormal blood vessel growth) at the disc (NVD) or elsewhere in the retina (NVE).
+- May present with vitreous or preretinal hemorrhage.
+- High risk of tractional retinal detachment.
+
+# Age-Related Macular Degeneration (AMD)
+- **Early AMD:** Presence of medium-sized drusen (63 to <125 µm) and no pigmentary abnormalities.
+- **Intermediate AMD:** Presence of large drusen (≥125 µm) or any pigmentary abnormalities.
+- **Advanced AMD:** Presence of either neovascular (wet) AMD or geographic atrophy (dry) involving the center of the macula.
+
+# Recommended Actions
+- **Mild to Moderate NPDR:** Optimize systemic control (HbA1c, blood pressure). Annual or semi-annual follow-up with fundus photography.
+- **Severe NPDR to PDR:** Urgent referral to a retina specialist. Consider panretinal photocoagulation (PRP) or anti-VEGF therapy to prevent severe vision loss.
+- **Diabetic Macular Edema (DME):** Treat with intravitreal anti-VEGF injections if clinically significant.
+- **Early/Intermediate AMD:** Recommend AREDS2 vitamin supplementation, smoking cessation, and home Amsler grid monitoring.
+- **Advanced (Wet) AMD:** Immediate referral for intravitreal anti-VEGF injections.
